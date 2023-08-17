@@ -537,13 +537,15 @@
           <li><a href="https://wa.me/+233201583060" target="_blank"><i class="bx bxl-whatsapp"></i></a></li>
         </ul>
       </div>
-      <form action="https://formspree.io/f/mnqknqqa" method="POST">
+      <form id="contact-form">
         <input type="text" id="name" name="name" placeholder="Your Name..." required>
         <input type="email" id="email" name="email" placeholder="Your Email.." required>
         <input type="text" id="topic" name="topic" placeholder="Mail Topic..." required>
         <textarea id="message" name="message" rows="6" placeholder="Message..." required></textarea>
         <!-- submit button -->
-        <button type="submit" class="btn">Send <i class="bx bx-chevrons-right"></i></button>
+        <button type="submit" class="btn" id="submit-button">Send <i class="bx bx-chevrons-right"></i></button>
+        <!--sucess message-->
+        <p id="success-message" style="display: none; color: white;">Message sent successfully!</p>
       </form>
     </div>
   </section>
@@ -559,6 +561,9 @@
 
   <!--main.js-->
   <script src="../js/main.js"></script>
+
+  <!--mail.js-->
+  <script src="../js/mail.js"></script>
 
   <!--typed.js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"
