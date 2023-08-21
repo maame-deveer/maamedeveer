@@ -104,7 +104,7 @@ img {
 
 .container {
     width: var(--container-width-lg);
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -155,7 +155,7 @@ section h1 {
 
 /*---------- Navbar ----------*/
 nav {
-    width: 100vw;
+    width: 100%;
     height: 5rem;
     display: grid;
     place-items: center;
@@ -163,15 +163,24 @@ nav {
     z-index: 20;
 }
 
-.window-scroll {
-    background: var(--color-primary-variant);
-    box-shadow: 0 1.5rem 1.5rem rgba(34, 2, 48, 0.2);
-    transition: var(--transition);
+nav .container.nav-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    gap: 10rem;
 }
 
-.window-scroll h3,
-.window-scroll a {
-    color: var(--color-white);
+.nav-logo {
+    margin-right: 15rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
 nav a {
@@ -185,10 +194,15 @@ nav a:hover {
     color: var(--color-primary);
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.window-scroll {
+    background: var(--color-primary-variant);
+    box-shadow: 0 1.5rem 1.5rem rgba(34, 2, 48, 0.2);
+    transition: var(--transition);
+}
+
+.window-scroll h3,
+.window-scroll a {
+    color: var(--color-white);
 }
 
 /** span and close buttons for tabllets and phones*/
@@ -213,13 +227,6 @@ nav .togglebtn span {
     transition-property: transform, opacity;
 }
 
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
-}
-
 /*---------- Header ----------*/
 header {
     background: var(--color-white);
@@ -231,6 +238,10 @@ header {
     overflow: hidden;
 }
 
+header .container {
+    max-width: 1000px;
+}
+
 .header-container {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -238,7 +249,7 @@ header {
     gap: 1rem;
 }
 
-.container .hero-pic {
+.hero-pic {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -279,7 +290,9 @@ header {
 }
 
 .hero-text p {
+    text-align: justify;
     margin-top: 12px;
+    width: 35rem;
     font-weight: 600;
     color: var(--color-black);
 }
@@ -333,23 +346,23 @@ header {
 /*---------- Skills Section ----------*/
 section#skills {
     background: var(--color-light);
+    margin-top: 10rem;
 }
 
-section#skills .container {
+#skills .container {
     display: grid;
-    grid-template-columns: auto;
-    gap: 5rem;
-}
-
-section#skills .container h1 {
-    margin-top: 5rem;
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
 }
 
 .skill-orbits {
     display: flex;
+    position: relative;
+    left: 20rem;
     justify-content: center;
     align-items: center;
-    margin-top: -6rem;
 }
 
 /*skill orbit*/
@@ -593,23 +606,14 @@ section#skills .container h1 {
 /*skills breakdown*/
 .skills-breakdown {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: -2rem;
-}
-
-.skills-breakdown .main {
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-.skills-breakdown .main .frontend,
-.skills-breakdown .main .backend,
+.skills-breakdown .frontend,
+.skills-breakdown .backend,
 .skills-breakdown .tools {
     display: flex;
     flex-direction: column;
@@ -623,43 +627,43 @@ section#skills .container h1 {
     border-top: 5px solid var(--color-primary);
 }
 
-.skills-breakdown .main .frontend .skills,
+.skills-breakdown .frontend .skills,
 .skills-breakdown .tools .skills,
-.skills-breakdown .main .backend .skills {
+.skills-breakdown .backend .skills {
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 1rem;
 }
 
-.skills-breakdown .main .backend .skills span:last-child img {
+.skills-breakdown .backend .skills span:last-child img {
     width: 5rem;
     height: 5rem;
     margin-top: -0.5px;
 }
 
-.skills-breakdown .main .frontend .skills span img,
-.skills-breakdown .main .backend .skills span img,
+.skills-breakdown .frontend .skills span img,
+.skills-breakdown .backend .skills span img,
 .skills-breakdown .tools .skills span img {
     width: 4rem;
     height: 4rem;
 }
 
-.skills-breakdown .main .frontend:hover {
+.skills-breakdown .frontend:hover {
     box-shadow: 0 1rem 1rem var(--color-inner-circle-2);
     border-top: 0;
 }
 
-.skills-breakdown .main .frontend:hover h4 {
+.skills-breakdown .frontend:hover h4 {
     color: var(--color-inner-circle-2);
 }
 
-.skills-breakdown .main .backend:hover {
+.skills-breakdown .backend:hover {
     box-shadow: 0 1rem 1rem var(--color-inner-circle-1);
     border-top: 0;
 }
 
-.skills-breakdown .main .backend:hover h4 {
+.skills-breakdown .backend:hover h4 {
     color: var(--color-inner-circle-1);
 }
 
@@ -676,6 +680,10 @@ section#skills .container h1 {
 section#portfolio {
     margin-top: -5rem;
     background: var(--color-white);
+}
+
+#portfolio .container {
+    max-width: 1000px;
 }
 
 #portfolio .container h2 {
@@ -804,6 +812,10 @@ section#services {
     display: none;
 }
 
+#services .container {
+    max-width: 1000px;
+}
+
 #services .container .services-container {
     display: grid;
     grid-template-columns: 25% auto;
@@ -884,6 +896,10 @@ section#services {
 /*---------- Blog Section ----------*/
 section#blog {
     background: var(--color-light);
+}
+
+#blog .container {
+    max-width: 1000px;
 }
 
 #blog .container .blog-posts.swiper-wrapper {
@@ -992,11 +1008,15 @@ section#blog {
 }
 
 /*---------- Contact Section ----------*/
-#contact {
+section#contact {
     background: var(--color-primary);
     color: var(--color-white);
     margin: 0;
     margin-top: -5rem;
+}
+
+#contact .container {
+    max-width: 1000px;
 }
 
 .contact-container {
@@ -1059,37 +1079,18 @@ footer {
 }
 
 /*---------- Media Queries ----------*/
-@media(min-width: 1282px) {
+@media(max-width: 1319px) {
     section#skills .container {
-        margin-left: 4.5rem;
+        margin-right: 20rem;
+    }
+
+    .nav-logo {
+        margin-right: 5rem;
+    }
+
+    .hero-text p {
+        width: 32rem;
     }
 }
 
-@media(max-width:1280px) {
-
-    .skills-breakdown {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5rem;
-    }
-
-    .skills-breakdown .main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-}
-
-@media(max-width:1050) {
-    .skills-breakdown .main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
-}
+@media(max-width: 1160px) {}

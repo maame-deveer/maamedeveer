@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="​Portfolio, Software Enigneer, Dotnet Developer, C# Developer">
+  <meta name="description" content="">
   <title>M.L De Veer</title>
   <!--boxicon cdn-->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -26,13 +28,13 @@
       </a>
 
       <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="active">Home</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
-          <a href="cv.pdf" class="btn btn-primary" download><i class="bx bx-download"></i> Download CV</a>
+          <a href="cv.pdf" class="btn btn-primary" target="_blank"><i class="bx bx-download"></i> Download CV</a>
         </li>
       </ul>
 
@@ -52,13 +54,14 @@
         <img src="profile.PNG" alt="profile pic" />
       </div>
       <div class="hero-text">
-        <h5>Hi I'm A <span class="input">Software Developer</span></h5>
+        <h5>Hi I Am A <span class="input">Software Developer</span></h5>
         <h1>Maame Lankar De Veer</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sed
-          nihil beatae sint. Reiciendis ea facilis alias voluptate dignissimos
-          iusto corporis doloremque pariatur odit laudantium maiores,
-          voluptatem, cupiditate quibusdam inventore.
+          Hello there! I am a software engineer who loves working with the .NET ecosystem. I enjoy creating cool stuff
+          with code and solving problems.From honing my skills to exploring new horizons, my journey revolves around
+          continuous learning and growth. As a firm believer in collaboration, I am excited to connect with fellow
+          developers and enthusiasts to create something extraordinary together. So, whether it's designing efficient
+          applications or delving into the intricacies of software development, Let's build something amazing together!
         </p>
 
         <div class="btn-group">
@@ -80,8 +83,8 @@
 
   <!--skills section-->
   <section id="skills">
+    <h1>My Skills</h1>
     <div class="container">
-      <h1>My Skills</h1>
       <!--skills orbit-->
       <div class="skill-orbits">
         <div class="outer-circle">
@@ -117,40 +120,38 @@
         </div>
       </div>
       <!--end of skills orbit-->
-
       <!--skills breakdown-->
       <div class="skills-breakdown">
-        <div class="main">
-          <!--frontend-->
-          <div class="frontend">
-            <h4>Frontend</h4>
-            <div class="skills">
-              <span><img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" /></span>
-              <span><img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" /></span>
-              <span><img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" /></span>
-            </div>
+        <!--frontend-->
+        <div class="frontend">
+          <h4>Frontend</h4>
+          <div class="skills">
+            <span><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" /></span>
+            <span><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" /></span>
+            <span><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" /></span>
           </div>
-          <!--end of frontend-->
-
-          <!--backend-->
-          <div class="backend">
-            <h4>Backend</h4>
-            <div class="skills">
-              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" /></span>
-              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" /></span>
-              <span><img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" /></span>
-              <span><img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" /></span>
-              <span><img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" /></span>
-            </div>
-          </div>
-          <!--end of backend-->
         </div>
+        <!--end of frontend-->
+
+        <!--backend-->
+        <div class="backend">
+          <h4>Backend</h4>
+          <div class="skills">
+            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" /></span>
+            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" /></span>
+            <span><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" /></span>
+            <span><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" /></span>
+            <span><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" /></span>
+          </div>
+        </div>
+        <!--end of backend-->
+
         <!--tools-->
         <div class="tools">
           <h4>Tools</h4>
@@ -165,6 +166,7 @@
         </div>
         <!--end of tools-->
       </div>
+      <!--end of skills breakdown-->
     </div>
   </section>
   <!--end of skills section-->
@@ -573,7 +575,7 @@
   <script>
     //swiper js
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 2,
       pagination: {
         el: ".swiper-pagination",
@@ -592,6 +594,7 @@
         "Backend Developer",
         ".Net Developer",
         "Freelancer",
+        "Tech Content Writer",
       ],
       typeSpeed: 70,
       backSpeed: 55,
