@@ -126,13 +126,13 @@
     }
 }
 
-@media(max-width: 960px) {
+@media(max-width: 970px) {
     .slider-arrows {
-        gap: 45rem;
+        gap: 43rem;
     }
 }
 
-@media(max-width: 910px) {
+@media(max-width: 878px) {
     .slider-arrows {
         gap: 40rem;
     }

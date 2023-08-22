@@ -1152,3 +1152,265 @@ footer {
         display: none;
     }
 }
+
+@media(max-width: 1100px) {
+    .skills-breakdown {
+        left: 4rem;
+    }
+}
+
+/*tablets*/
+@media(max-width: 960px) {
+    .skills-breakdown {
+        left: 3.5rem;
+    }
+
+    .hero-text p {
+        width: 28rem;
+    }
+}
+
+@media(max-width: 950px) {
+
+    /*nav*/
+    nav {
+        background: var(--color-black);
+    }
+
+    .nav-logo h3 {
+        color: var(--color-white);
+        margin-right: 33rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 5rem;
+        right: 0.5rem;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        z-index: 3;
+        display: none;
+        perspective: 400px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        height: 5.4rem;
+        border-bottom: 1px solid var(--color-black);
+        opacity: 0;
+        transform-origin: top;
+        transform: rotateX(90deg);
+        animation: openNavAnimation 650ms ease forwards;
+    }
+
+    .nav-menu li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .nav-menu li:nth-child(3) {
+        animation-delay: 350ms;
+    }
+
+    .nav-menu li:nth-child(4) {
+        animation-delay: 450ms;
+    }
+
+    .nav-menu li:nth-child(5) {
+        animation-delay: 550ms;
+    }
+
+    .nav-menu li:nth-child(6) {
+        animation-delay: 650ms;
+    }
+
+    @keyframes openNavAnimation {
+        to {
+            transform: rotateX(0);
+            opacity: 1;
+        }
+    }
+
+    .nav-menu li a {
+        background: var(--color-primary);
+        box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+        color: var(--color-white);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+    }
+
+    .nav-menu li a i {
+        display: none;
+    }
+
+    .nav-menu li a:hover {
+        background: var(--color-light);
+        color: var(--color-black);
+    }
+
+    nav .togglebtn {
+        display: block;
+        position: scale;
+    }
+
+    .togglebtn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(0, 10px);
+    }
+
+    .togglebtn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .togglebtn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(0, -10.5px);
+    }
+}
+
+@media(max-width: 900px) {
+
+    .nav-logo h3 {
+        margin-right: 30rem;
+    }
+
+    .nav-menu {
+        right: 1rem;
+    }
+}
+
+@media(max-width: 850px) {
+
+    .nav-logo h3 {
+        margin-right: 28rem;
+    }
+
+    .nav-menu {
+        right: 1.5rem;
+    }
+}
+
+@media(max-width: 825px) {
+
+    .nav-logo h3 {
+        margin-right: 25rem;
+    }
+}
+
+@media(max-width: 785px) {
+
+    .nav-logo h3 {
+        margin-right: 22rem;
+    }
+}
+
+@media(max-width: 750px) {
+
+    .nav-logo h3 {
+        margin-right: 20rem;
+    }
+}
+
+@media(max-width: 715px) {
+
+    .nav-logo h3 {
+        margin-right: 18rem;
+    }
+}
+
+@media(max-width: 680px) {
+
+    .nav-logo h3 {
+        margin-right: 16rem;
+    }
+}
+
+@media(max-width: 650px) {
+
+    .nav-logo h3 {
+        margin-right: 14rem;
+    }
+}
+
+@media(max-width: 615px) {
+
+    .nav-logo h3 {
+        margin-right: 12rem;
+    }
+}
+
+@media(max-width: 580px) {
+
+    .nav-logo h3 {
+        margin-right: 10rem;
+    }
+}
+
+@media(max-width: 550px) {
+
+    .nav-logo h3 {
+        margin-right: 8rem;
+    }
+}
+
+@media(max-width: 515px) {
+
+    .nav-logo h3 {
+        margin-right: 6rem;
+    }
+}
+
+@media(max-width: 480px) {
+
+    .nav-logo h3 {
+        margin-right: 4rem;
+    }
+}
+
+@media(max-width: 450px) {
+
+    .nav-logo h3 {
+        margin-right: 2rem;
+    }
+}
+
+@media(max-width: 415px) {
+
+    .nav-logo h3 {
+        margin-right: 0rem;
+    }
+}
+
+@media(max-width: 380px) {
+
+    .nav-logo h3 {
+        margin-right: -2rem;
+    }
+}
+
+@media(max-width: 350px) {
+
+    .nav-logo h3 {
+        margin-right: -4rem;
+    }
+
+    /* .nav-menu {
+        right: 1.8rem;
+    } */
+}
+
+@media(max-width: 330px) {
+    .nav-menu {
+        right: 0rem;
+    }
+}
+
+@media(max-width: 315px) {
+
+    .nav-logo h3 {
+        margin-right: -6rem;
+    }
+}

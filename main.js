@@ -94,7 +94,21 @@ tools.addEventListener('mouseout', function () {
     innermostCircle.style.background = 'var(--color-primary)';
 });
 
+//toggle nav menu
+const toggleButton = document.querySelector(".togglebtn");
+const navMenu = document.querySelector(".nav-menu");
 
+toggleButton.addEventListener("click", () => {
+    // Toggle the "active" class on the toggle button
+    toggleButton.classList.toggle("active");
+
+    // Toggle the display property of the navigation menu
+    if (navMenu.style.display === "block") {
+        navMenu.style.display = "none";
+    } else {
+        navMenu.style.display = "block";
+    }
+});
 
 
 
