@@ -21,10 +21,11 @@ prevArrow.addEventListener('click', function () {
 });
 
 nextArrow.addEventListener('click', function () {
-    if (currentIndex < slideCount - 1) {
+    if (currentIndex < slideCount - 3) {
         currentIndex++;
-        gridContainer.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
     }
+
+    gridContainer.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
 });
 
 //show services section

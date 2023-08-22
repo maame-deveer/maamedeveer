@@ -60,11 +60,149 @@
         margin-right: 2rem;
     }
 
-    .slider-arrows .prev-arrow {
+    .slider-arrows .next-arrow {
         margin-left: 1rem;
     }
 
     .slider-arrows span {
         width: 15rem;
+    }
+}
+
+@media(max-width: 1160px) {
+    .slider-arrows {
+        gap: 60rem;
+        bottom: 20%;
+    }
+
+    .slider-arrows span {
+        width: 15rem;
+    }
+
+    .slider-arrows span p {
+        font-size: 4rem;
+    }
+}
+
+@media(max-width: 1140px) {
+    .slider-arrows {
+        gap: 58rem;
+    }
+
+    .slider-arrows .prev-arrow {
+        margin-right: 1rem;
+    }
+
+    .slider-arrows .next-arrow {
+        margin-left: -1rem;
+    }
+}
+
+@media(max-width: 1100px) {
+    .slider-arrows {
+        gap: 50rem;
+    }
+
+    .slider-arrows .prev-arrow {
+        margin-right: 2rem;
+    }
+
+    .slider-arrows .next-arrow {
+        margin-left: 1rem;
+    }
+
+    .slider-arrows span {
+        width: 5rem;
+    }
+}
+
+@media(max-width: 1040px) {
+    .slider-arrows .prev-arrow {
+        margin-right: 1rem;
+    }
+
+    .slider-arrows .next-arrow {
+        margin-left: 0rem;
+    }
+}
+
+@media(max-width: 960px) {
+    .slider-arrows {
+        gap: 45rem;
+    }
+}
+
+@media(max-width: 910px) {
+    .slider-arrows {
+        gap: 40rem;
+    }
+}
+
+@media(max-width: 840px) {
+    .slider-arrows {
+        gap: 35rem;
+    }
+}
+
+@media(max-width: 760px) {
+    .slider-arrows {
+        gap: 30rem;
+    }
+}
+
+@media(max-width: 680px) {
+    .slider-arrows {
+        gap: 25rem;
+    }
+}
+
+@media(max-width: 605px) {
+    .slider-arrows {
+        gap: 20rem;
+    }
+}
+
+@media(max-width: 520px) {
+    .slider-arrows {
+        gap: 15rem;
+    }
+}
+
+@media(max-width: 440px) {
+    .slider-arrows {
+        gap: 10rem;
+    }
+
+    .slider-arrows .prev-arrow {
+        margin-right: 2rem;
+    }
+
+    .slider-arrows .next-arrow {
+        margin-left: 1rem;
+    }
+}
+
+@media(max-width: 360px) {
+
+    .slider-arrows span {
+        width: 3rem;
+    }
+
+    .slider-arrows span p {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 280px) {
+    .slider-arrows {
+        gap: 10rem;
+    }
+
+    .slider-arrows .prev-arrow {
+        margin-right: 0rem;
+    }
+
+    .slider-arrows .next-arrow {
+        margin-left: 0rem;
     }
 }

@@ -1093,4 +1093,62 @@ footer {
     }
 }
 
-@media(max-width: 1160px) {}
+@media(max-width: 1300px) {
+    header {
+        height: calc(100vh - 5rem);
+    }
+}
+
+@media(max-width: 1160px) {
+
+    /*nav*/
+    nav .container.nav-container {
+        display: flex;
+    }
+
+    .nav-logo {
+        margin-right: 0rem;
+    }
+
+    /*skills*/
+    section#skills {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #skills .container {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .skill-orbits {
+        display: none;
+    }
+
+    .skills-breakdown {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        left: 5rem;
+    }
+
+    .skills-breakdown .tools {
+        grid-column: 1/ span 2;
+        justify-self: center;
+    }
+
+    /*porfolio*/
+    #portfolio .container {
+        max-width: 1000px;
+    }
+
+    #portfolio .container .portfolio-projects {
+        display: flex;
+        flex-direction: row;
+        overflow: inherit;
+    }
+
+    .project:hover .details {
+        display: none;
+    }
+}
