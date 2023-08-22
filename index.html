@@ -408,11 +408,6 @@
         <!-- Slides -->
         <a href="#" target="_blank" class="article swiper-slide">
           <img src="photo.jpg" alt="" class="article-image">
-          <div class="summary">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, delectus. Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
 
           <div class="article-data-container">
             <div class="article-data">
@@ -426,11 +421,6 @@
         <!-- Slides -->
         <a href="#" target="_blank" class="article swiper-slide">
           <img src="photo.jpg" alt="" class="article-image">
-          <div class="summary">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, delectus. Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
 
           <div class="article-data-container">
             <div class="article-data">
@@ -444,11 +434,6 @@
         <!-- Slides -->
         <a href="#" target="_blank" class="article swiper-slide">
           <img src="photo.jpg" alt="" class="article-image">
-          <div class="summary">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, delectus. Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
 
           <div class="article-data-container">
             <div class="article-data">
@@ -462,11 +447,6 @@
         <!-- Slides -->
         <a href="#" target="_blank" class="article swiper-slide">
           <img src="../assets/photo.jpg" alt="" class="article-image">
-          <div class="summary">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, delectus. Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
 
           <div class="article-data-container">
             <div class="article-data">
@@ -480,11 +460,6 @@
         <!-- Slides -->
         <a href="#" target="_blank" class="article swiper-slide">
           <img src="../assets/photo.jpg" alt="" class="article-image">
-          <div class="summary">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, delectus. Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
 
           <div class="article-data-container">
             <div class="article-data">
@@ -498,11 +473,6 @@
         <!-- Slides -->
         <a href="#" target="_blank" class="article swiper-slide">
           <img src="photo.jpg" alt="" class="article-image">
-          <div class="summary">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, delectus. Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
 
           <div class="article-data-container">
             <div class="article-data">
@@ -575,16 +545,29 @@
   <script>
     //swiper js
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
+      slidesPerView: calculateSlidesPerView(), // Set initial slides per view
       spaceBetween: 2,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+    });
+
+    // Function to calculate slides per view based on window width
+    function calculateSlidesPerView() {
+      if (window.innerWidth >= 1035) {
+        return 3; // Number of slides per view for larger screens
+      } else if (window.innerWidth >= 730) {
+        return 2; // Number of slides per view for medium screens
+      } else {
+        return 1; // Number of slides per view for smaller screens
+      }
+    }
+
+    // Update slides per view on window resize
+    window.addEventListener('resize', () => {
+      swiper.params.slidesPerView = calculateSlidesPerView();
+      swiper.update();
     });
 
     //typed.js

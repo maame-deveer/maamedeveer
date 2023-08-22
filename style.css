@@ -309,6 +309,7 @@ header .container {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    margin-top: 2rem;
 }
 
 .hero-text .socials a {
@@ -905,13 +906,13 @@ section#blog {
 #blog .container .blog-posts.swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     /*overflow: hidden;*/
 }
 
 .article.swiper-slide {
     position: relative;
-    width: 20rem;
+    width: 30rem;
     height: 20rem;
 }
 
@@ -923,36 +924,11 @@ section#blog {
     transition: transform .25s;
 }
 
-.summary {
-    display: none;
+.article-data-container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    background: rgba(34, 2, 48, 0.5);
-    z-index: 2;
-}
-
-.summary p {
-    margin: 0.5rem;
-    text-align: justify;
-    font-weight: 500;
-    color: var(--color-white);
-    word-wrap: break-word;
-}
-
-.article-category {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 1rem;
-    background-color: var(--color-primary);
-    font-size: 1rem;
-    color: var(--color-white);
-    text-transform: uppercase;
-    z-index: 10;
-}
-
-.article-data-container {
     width: 100%;
     position: absolute;
     left: 0;
@@ -961,10 +937,6 @@ section#blog {
     background-color: var(--color-primary);
     z-index: 10;
     transition: background-color .5s;
-}
-
-.article:hover .summary {
-    display: flex;
 }
 
 .article:hover .article-data-container {
@@ -1160,6 +1132,12 @@ footer {
 }
 
 /*tablets*/
+@media(max-width: 970px) {
+    header {
+        height: 110vh;
+    }
+}
+
 @media(max-width: 960px) {
     .skills-breakdown {
         left: 3.5rem;
@@ -1271,6 +1249,67 @@ footer {
     }
 }
 
+@media(max-width: 930px) {
+
+    /*header*/
+
+    header {
+        height: 160vh;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-text p {
+        text-align: justify;
+        margin-top: 12px;
+        width: fit-content;
+    }
+
+    /*skills*/
+
+    .skills-breakdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*portfolio*/
+    .project .card {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .project .card .thumbnail img {
+        height: 20rem;
+        z-index: 0;
+    }
+
+    .project .card .overlay {
+        width: 20rem;
+    }
+
+    .project .card .overlay .stack {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap: 1rem;
+    }
+
+    .project .card .overlay .stack p {
+        font-size: 0.75rem;
+        width: 3rem;
+    }
+
+    .project .card .overlay .stack p:first-child {
+        width: 6rem;
+    }
+}
+
 @media(max-width: 900px) {
 
     .nav-logo h3 {
@@ -1290,6 +1329,19 @@ footer {
 
     .nav-menu {
         right: 1.5rem;
+    }
+
+    /*header font sizes*/
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
     }
 }
 
@@ -1321,6 +1373,7 @@ footer {
     }
 }
 
+/*mobile*/
 @media(max-width: 680px) {
 
     .nav-logo h3 {
@@ -1354,6 +1407,10 @@ footer {
     .nav-logo h3 {
         margin-right: 8rem;
     }
+
+    #portfolio .container h2 {
+        display: none;
+    }
 }
 
 @media(max-width: 515px) {
@@ -1367,6 +1424,11 @@ footer {
 
     .nav-logo h3 {
         margin-right: 4rem;
+    }
+
+    /*header font sizes*/
+    h1 {
+        font-size: 2rem;
     }
 }
 
@@ -1412,5 +1474,10 @@ footer {
 
     .nav-logo h3 {
         margin-right: -6rem;
+    }
+
+    /*header font sizes*/
+    h1 {
+        font-size: 1.5rem;
     }
 }

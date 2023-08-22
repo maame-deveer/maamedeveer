@@ -97,19 +97,20 @@ tools.addEventListener('mouseout', function () {
 //toggle nav menu
 const toggleButton = document.querySelector(".togglebtn");
 const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelectorAll("nav ul li a");
 
 toggleButton.addEventListener("click", () => {
-    // Toggle the "active" class on the toggle button
     toggleButton.classList.toggle("active");
-
-    // Toggle the display property of the navigation menu
-    if (navMenu.style.display === "block") {
-        navMenu.style.display = "none";
-    } else {
-        navMenu.style.display = "block";
-    }
+    navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
 });
 
+// Close the navigation when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.style.display = "none";
+        toggleButton.classList.remove("active");
+    });
+});
 
 
 
