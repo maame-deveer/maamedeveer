@@ -66,7 +66,7 @@ frontend.addEventListener('mouseout', function () {
 
 /*backend*/
 backend.addEventListener('mouseover', function () {
-    skillOrbits.style.margin = '0 0 10rem 0';
+    skillOrbits.style.margin = '0 0 12rem 0';
     outerCircle.style.display = 'none';
     innerCircle_2.style.display = 'none';
     innermostCircle.style.background = 'var(--color-inner-circle-3)';

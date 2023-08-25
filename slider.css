@@ -29,7 +29,7 @@
     height: 5rem;
     cursor: pointer;
     padding: 5px 10px;
-    background-color: rgba(111, 28, 166, 0.1);
+    background: rgba(111, 28, 166, 0.1);
     color: #fff;
     margin: 0 5px;
 }
@@ -95,6 +95,14 @@
 
     .slider-arrows .next-arrow {
         margin-left: -1rem;
+    }
+
+    .slider-arrows span {
+        background: #220230;
+    }
+
+    .slider-arrows span p {
+        color: #fff;
     }
 }
 
