@@ -13,6 +13,9 @@ var slideWidth = slider.offsetWidth;
 var slideCount = gridContainer.children.length;
 var currentIndex = 0;
 
+// Calculate the number of visible slides based on the available width
+var visibleSlides = Math.floor(slider.offsetWidth / slideWidth);
+
 prevArrow.addEventListener('click', function () {
     if (currentIndex > 0) {
         currentIndex--;
@@ -21,8 +24,10 @@ prevArrow.addEventListener('click', function () {
 });
 
 nextArrow.addEventListener('click', function () {
-    if (currentIndex < slideCount - 1) {
+    if (currentIndex < slideCount - visibleSlides) {
         currentIndex++;
+    } else {
+        currentIndex = slideCount - visibleSlides;
     }
 
     gridContainer.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
