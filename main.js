@@ -21,7 +21,7 @@ prevArrow.addEventListener('click', function () {
 });
 
 nextArrow.addEventListener('click', function () {
-    if (currentIndex < slideCount - 3) {
+    if (currentIndex < slideCount - 1) {
         currentIndex++;
     }
 
