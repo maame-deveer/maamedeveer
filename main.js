@@ -28,14 +28,6 @@ nextArrow.addEventListener('click', function () {
     gridContainer.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
 });
 
-//show services section
-var servicesBtn = document.querySelector('.freelance');
-var servicesSection = document.querySelector('#services');
-
-servicesBtn.addEventListener('click', function () {
-    servicesSection.style.display = 'block'
-});
-
 //spinning skills 
 var frontend = document.querySelector('.frontend');
 var backend = document.querySelector('.backend');
